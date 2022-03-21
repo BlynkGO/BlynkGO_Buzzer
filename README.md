@@ -1,5 +1,12 @@
 # BlynkGO_Buzzer
- ESP32 Buzzer with beep and melody  by non-blocking
+ ESP32 Buzzer with beep and melody  by non-blocking  
+### คุณสมบัติ
+ - เล่น beep ได้
+ - เล่น tone ได้
+ - เล่น melody ได้
+ - ทำงานแบบ non-blocking  
+   ทำให้สามารถเล่นเสียงไปได้ พร้อมๆกับ ทำงานอุปกรณ์รอบข้างอื่นๆได้  
+   โดยไม่ต้องหยุดรอจนกว่าจะเล่นเสียงเสร็จ 
 
 ## Buzzer Wiring
 
@@ -67,6 +74,112 @@ void loop(){
 
 }
 ```
+
+## Melody Note (โน้ตสำหรับทำ melody)
+
+```cpp
+NOTE_NO   // Rest Note (เงียบเสียง)
+NOTE_B0 
+NOTE_C1   
+NOTE_CS1   
+NOTE_D1   // โด
+NOTE_DS1  // โด #
+NOTE_E1   // เร
+NOTE_F1   // มี
+NOTE_FS1  // มี #
+NOTE_G1   // ฟา
+NOTE_GS1  // ฟา #
+NOTE_A1   // ซอล
+NOTE_AS1  // ซอล #
+NOTE_B1   // ลา
+NOTE_C2   // ที
+NOTE_CS2  // ที #
+NOTE_D2
+NOTE_DS2 
+NOTE_E2
+NOTE_F2
+NOTE_FS2 
+NOTE_G2
+NOTE_GS2 
+NOTE_A2
+NOTE_AS2 
+NOTE_B2
+NOTE_C3
+NOTE_CS3 
+NOTE_D3
+NOTE_DS3 
+NOTE_E3
+NOTE_F3
+NOTE_FS3 
+NOTE_G3
+NOTE_GS3 
+NOTE_A3
+NOTE_AS3 
+NOTE_B3
+NOTE_C4
+NOTE_CS4 
+NOTE_D4
+NOTE_DS4 
+NOTE_E4
+NOTE_F4
+NOTE_FS4 
+NOTE_G4
+NOTE_GS4 
+NOTE_A4
+NOTE_AS4 
+NOTE_B4
+NOTE_C5
+NOTE_CS5 
+NOTE_D5
+NOTE_DS5 
+NOTE_E5
+NOTE_F5
+NOTE_FS5 
+NOTE_G5
+NOTE_GS5 
+NOTE_A5
+NOTE_AS5 
+NOTE_B5
+NOTE_C6
+NOTE_CS6 
+NOTE_D6
+NOTE_DS6 
+NOTE_E6
+NOTE_F6
+NOTE_FS6 
+NOTE_G6
+NOTE_GS6 
+NOTE_A6
+NOTE_AS6 
+NOTE_B6
+NOTE_C7
+NOTE_CS7 
+NOTE_D7
+NOTE_DS7 
+NOTE_E7
+NOTE_F7
+NOTE_FS7 
+NOTE_G7
+NOTE_GS7 
+NOTE_A7
+NOTE_AS7 
+NOTE_B7
+NOTE_C8
+NOTE_CS8 
+NOTE_D8
+NOTE_DS8 
+```
+
+## Melody Raw Duration
+<p align="center">
+  <img src="images/note_raw_duration.png" alt="image"/>
+</p>
+  
+## Melody BPM (Beat Per Minute)
+<p align="center">
+  <img src="images/bpm_of_quarter_note.png" alt="image"/>
+</p>
+  
 
 ## About 
 
