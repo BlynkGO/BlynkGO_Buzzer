@@ -19,10 +19,10 @@ void setup() {
   buzzer.playMelody();         // play แบบ วนไปเรื่อยๆ
 
   // หากจะ play แบบรอบเดียว
-  // buzzer.playMelody(false);
+  // buzzer.playMelody(1);
 
-  // หากจะ play แบบรอบเดียว และ เมื่อเล่นเสร็จให้ทำอะไรต่อ
-  // buzzer.playMelody(false, [](){
+  // หากจะ play แบบ 2 รอบ และ เมื่อเล่นเสร็จให้ทำอะไรต่อ
+  // buzzer.playMelody(2, [](){
   //   /* เมื่อเล่นจบให้ทำอะไรวางตรงนี้ */
   //   Serial.println("[Melody] Done");
   // });
