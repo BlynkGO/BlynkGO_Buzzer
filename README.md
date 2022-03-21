@@ -47,16 +47,16 @@ void setup() {
 
   buzzer.addMelody(melody_jingle_bells);
 
-  buzzer.playMelody();         // play แบบ วนไปเรื่อยๆ
+//  buzzer.playMelody();         // play แบบ วนไปเรื่อยๆ
 
   // หากจะ play แบบรอบเดียว
-  // buzzer.playMelody(false);
+  // buzzer.playMelody(1);
 
-  // หากจะ play แบบรอบเดียว และ เมื่อเล่นเสร็จให้ทำอะไรต่อ
-  // buzzer.playMelody(false, [](){
-  //   /* เมื่อเล่นจบให้ทำอะไรวางตรงนี้ */
-  //   Serial.println("[Melody] Done");
-  // });
+  // หากจะ play แบบ 2 รอบ และ เมื่อเล่นเสร็จให้ทำอะไรต่อ
+   buzzer.playMelody(2, [](){
+     /* เมื่อเล่นจบให้ทำอะไรวางตรงนี้ */
+     Serial.println("[Melody] Done");
+   });
 
   // buzzer.pauseMelody();     // หากจะ pause หยุดชั่วคราว
   // buzzer.playMelody();      // หากจะ กลับมาเล่นต่อจากที่เคย pause ไว้
