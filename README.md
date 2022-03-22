@@ -176,10 +176,38 @@ NOTE_DS8
 </p>
   
 ## Melody BPM (Beat Per Minute)
+BPM ค่า จังหวะดนตรีว่ากี่ Beat (ครั้ง) ต่อนาที ของ โน้ตตัวดำ (Quarter Note)  
+โดยสามารถใช้ค่า BPM จากโน้ตเพลง  
+
 <p align="center">
   <img src="images/bpm_of_quarter_note.png" alt="image"/>
 </p>
   
+  
+## True Duration Equation (สมการค่า Duration จริง)
+
+สมการค่า Duration จริง คำนวนตามสูตร  
+  
+![equation0](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;RawDuration&space;&space;\times&space;60000}{(200&space;\times&space;BPM)}&space;&space;[ms])  
+  
+  
+### ตัวอย่าง
+หากโน้ตเพลง มี BPM สำหรับ โน้ตตัวดำ 135 ครั้งต่อนาที  
+  
+และ ในโน้ตเพลง มี โน้ต F (ฟา) เปฺ็นโน้ตตัวดำ (Quarter Note) อยู่  
+แต่ โน้ตตัวดำ มี Raw Duration = 200
+ฉะนั้น โน้ต F (ฟา) ที่เป็นโน้ตตัวดำ จะใช้เวลาในการเล่นจริง 444 มิลลิวินาที  
+  
+![equation1](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;200&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;444&space;ms)
+  
+  
+และ หากในโน้ตเพลง มีโน้ต D (โด) เป็นโน้ตตัวขาว (Half Note) อยู่  
+แต่ โน้ตตัวขาว มี Raw Duration = 400
+ฉะนั้น โน้ต D (โด) ที่เป็นโน้ตตัวขาว จะใช้เวลาในการเล่นจริง 888 มิลลิวินาที  
+  
+![equation2](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;400&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;888&space;ms)
+  
+
 
 ## About 
 
