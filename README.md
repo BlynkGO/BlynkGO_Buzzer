@@ -10,10 +10,10 @@
 
 ## Buzzer Wiring
 
-<p align="center">
+<p align="left">
   <img src="images/BlynkGO_Board_buzzer_wiring.png" alt="image"/>
 </p>  
-<p align="center">
+<p align="left">
   <img src="images/ESP32_buzzer_wiring.png" alt="image"/>
 </p>  
 
@@ -77,6 +77,11 @@ void loop(){
 
 ## Melody Note (โน้ตสำหรับทำ melody)
 
+<p align="left">
+  <img src="images/notation_and_octave.png" alt="image"/>
+</p>  
+  
+  
 ```cpp
 NOTE_NO   // Rest Note (เงียบเสียง)
 NOTE_B0 
@@ -171,7 +176,7 @@ NOTE_DS8
 ```
 
 ## Melody Raw Duration
-<p align="center">
+<p align="left">
   <img src="images/note_raw_duration.png" alt="image"/>
 </p>
   
@@ -179,34 +184,60 @@ NOTE_DS8
 BPM ค่า จังหวะดนตรีว่ากี่ Beat (ครั้ง) ต่อนาที ของ โน้ตตัวดำ (Quarter Note)  
 โดยสามารถใช้ค่า BPM จากโน้ตเพลง  
 
-<p align="center">
+<p align="left">
   <img src="images/bpm_of_quarter_note.png" alt="image"/>
 </p>
   
-  
+.  
 ## True Duration Equation (สมการค่า Duration จริง)
 
 สมการค่า Duration จริง คำนวนตามสูตร  
   
 ![equation0](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;RawDuration&space;&space;\times&space;60000}{(200&space;\times&space;BPM)}&space;&space;[ms])  
-  
-  
+.  
 ### ตัวอย่าง
 หากโน้ตเพลง มี BPM สำหรับ โน้ตตัวดำ 135 ครั้งต่อนาที  
   
 และ ในโน้ตเพลง มี โน้ต F (ฟา) เปฺ็นโน้ตตัวดำ (Quarter Note) อยู่  
-แต่ โน้ตตัวดำ มี Raw Duration = 200
+แต่ โน้ตตัวดำ มี Raw Duration = 200  
 ฉะนั้น โน้ต F (ฟา) ที่เป็นโน้ตตัวดำ จะใช้เวลาในการเล่นจริง 444 มิลลิวินาที  
   
-![equation1](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;200&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;444&space;ms)
-  
-  
+![equation1](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;200&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;444&space;ms)  
+.  
 และ หากในโน้ตเพลง มีโน้ต D (โด) เป็นโน้ตตัวขาว (Half Note) อยู่  
-แต่ โน้ตตัวขาว มี Raw Duration = 400
+แต่ โน้ตตัวขาว มี Raw Duration = 400  
 ฉะนั้น โน้ต D (โด) ที่เป็นโน้ตตัวขาว จะใช้เวลาในการเล่นจริง 888 มิลลิวินาที  
   
-![equation2](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;400&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;888&space;ms)
+![equation2](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;400&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;888&space;ms)  
+.  
+## การสร้าง Melody File จากโน้ตเพลง
+
+ไฟล์ Melody เป็น ไฟล์ นามสกุล .c  
+ประกอบด้วย 3 ส่วนหลักๆ คือ  
   
+**1. Include Part**  
+**2. NOTE Part**  
+**3. Melody Description Part**  
+  
+<p align="left">
+  <img src="images/melody_file_elements.png" alt="image"/>
+</p>  
+  
+### 1 Inclue Part
+```c
+#include "melody_struct.h"
+```
+  
+### 2 NOTE Part
+
+<p align="left">
+  <img src="images/music_note_to_melody.png" alt="image"/>
+</p>  
+  
+### 3 Melody Description Part
+- notes
+- size  : จำนวนโน้ตทั้งหมดใน melody
+- bpm   : ค่า Beat ต่อ นาที ของ melody
 
 
 ## About 
