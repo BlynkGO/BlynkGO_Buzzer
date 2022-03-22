@@ -183,26 +183,29 @@ BPM ค่า จังหวะดนตรีว่ากี่ Beat (คร�
   <img src="images/bpm_of_quarter_note.png" alt="image"/>
 </p>
   
+  
 ## True Duration Equation (สมการค่า Duration จริง)
 
 สมการค่า Duration จริง คำนวนตามสูตร  
   
-<img src="http://www.sciweavers.org/tex2img.php?eq=TrueDuration%20%3D%20%20%20%5Cfrac%7B%20RawDuration%20%5Ctimes%20%20%2060000%7D%7B%20%28200%20%20%5Ctimes%20BPM%29%20%7D%20%20%5Bmillisecond%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="TrueDuration =   \frac{ RawDuration \times   60000}{ (200  \times BPM) }  [millisecond]" width="450" height="46" />  
+![equation0](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;RawDuration&space;&space;\times&space;60000}{(200&space;\times&space;BPM)}&space;&space;[ms])  
   
   
 ### ตัวอย่าง
 หากโน้ตเพลง มี BPM สำหรับ โน้ตตัวดำ 135 ครั้งต่อนาที  
   
 และ ในโน้ตเพลง มี โน้ต F (ฟา) เปฺ็นโน้ตตัวดำ (Quarter Note) อยู่  
+แต่ โน้ตตัวดำ มี Raw Duration = 200
 ฉะนั้น โน้ต F (ฟา) ที่เป็นโน้ตตัวดำ จะใช้เวลาในการเล่นจริง 444 มิลลิวินาที  
   
-![equation](https://bit.ly/3Iv9rAO)
+![equation1](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;200&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;444&space;ms)
   
   
 และ หากในโน้ตเพลง มีโน้ต D (โด) เป็นโน้ตตัวขาว (Half Note) อยู่  
+แต่ โน้ตตัวขาว มี Raw Duration = 400
 ฉะนั้น โน้ต D (โด) ที่เป็นโน้ตตัวขาว จะใช้เวลาในการเล่นจริง 888 มิลลิวินาที  
   
-![equation2](https://bit.ly/3ipaiIL)
+![equation2](https://latex.codecogs.com/svg.image?TrueDuration&space;=&space;\frac{&space;400&space;&space;\times&space;60000}{(200&space;\times&space;135)}=&space;&space;888&space;ms)
   
 
 
