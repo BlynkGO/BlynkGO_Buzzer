@@ -257,7 +257,7 @@ Melody File เป็น ไฟล์ นามสกุล .c
 - bpm   : ค่า Beat ต่อ นาที ของ melody ของโน้ตตัวดำ (Quarter Note's BPM)
 
 ## Melody File Usage  
-วิธีใช้ Melody File   
+**วิธีใช้ Melody File บนโปรเจค ArduionIDE**   
   
 1. ให้นำ melody c file ที่ตระเตรียม  
 มาวางในโฟลเดอร์ โปรเจคที่สร้างบน ArduinoIDE  
@@ -269,7 +269,7 @@ Melody File เป็น ไฟล์ นามสกุล .c
 MELODY_DECLARE(melody_jingle_bells);
 ```
   
-โดย วางไว้ก่อน `void setup()`  
+&nbsp;&nbsp;&nbsp;&nbsp;โดย วางไว้ก่อน `void setup()`  
 
 3. ให้ buzzer เรียกใช้งานด้วยคำสั่ง
 
